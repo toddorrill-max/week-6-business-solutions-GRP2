@@ -1,0 +1,53 @@
+{
+  "runner": "Playwright Python library with Chromium (not a Skill or MCP)",
+  "results": [
+    {
+      "check": "Five-page navigation",
+      "expected": "Five working page links on each page",
+      "actual": "25 link destinations returned HTTP 200",
+      "status": "Pass"
+    },
+    {
+      "check": "Mobile layout",
+      "expected": "No horizontal page overflow at 390px",
+      "actual": "All five pages fit a 390px viewport",
+      "status": "Pass"
+    },
+    {
+      "check": "Request trace and reduced motion",
+      "expected": "Four steps complete without animation delay",
+      "actual": "All four stations activate immediately; final status announced",
+      "status": "Pass"
+    },
+    {
+      "check": "Evidence tabs",
+      "expected": "Mouse and arrow keys switch evidence panels",
+      "actual": "All three business-evidence tabs switch correctly",
+      "status": "Pass"
+    },
+    {
+      "check": "Business-skill evidence",
+      "expected": "Screenshots and evidence downloads load",
+      "actual": "Both screenshots load; uploaded JSON and verification notes return HTTP 200",
+      "status": "Pass"
+    },
+    {
+      "check": "Page 4 responsive layout",
+      "expected": "No overflow from 320px to desktop",
+      "actual": "Passed at 320, 390, 768, and 1440px",
+      "status": "Pass"
+    },
+    {
+      "check": "JavaScript startup",
+      "expected": "No uncaught page errors",
+      "actual": "No errors across the five-page navigation and Page 4 interactions",
+      "status": "Pass"
+    }
+  ],
+  "unrun": [
+    "JSON checker tests T2\u2013T7",
+    "Full keyboard audit",
+    "Automated accessibility scan",
+    "Second video"
+  ]
+}

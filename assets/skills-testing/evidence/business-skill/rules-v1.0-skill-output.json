@@ -1,0 +1,157 @@
+{
+  "version": "1.0",
+  "generated_by": "tell-us-once-rules skill",
+  "estimates_note": "Turnaround figures are illustrative estimates (est.) for a class project.",
+  "customer_profile": {
+    "label": "Maria Lopez (fictional customer)",
+    "on_file": {
+      "full_name": "Maria Lopez",
+      "address": "418 Maple Ridge Drive, Westfield, OH 43000",
+      "phone": "(614) 555-0142",
+      "email": "maria.lopez@example.com",
+      "employer": "Westfield Regional Hospital"
+    }
+  },
+  "tasks": [
+    {
+      "id": "update-address",
+      "label": "Update my address",
+      "reuses": ["full_name", "phone", "email"],
+      "asks": [
+        {
+          "field": "new_address",
+          "label": "Your new address",
+          "type": "text",
+          "why": "We need to know where you've moved."
+        }
+      ],
+      "legal_check": null,
+      "turnaround_today": "Up to 5 business days (est.)",
+      "turnaround_new": "Within 1 business day (est.)",
+      "guarantee": {
+        "status": "covered",
+        "note": "If we ask for your phone or email again, we'll credit your account $10."
+      },
+      "result_message": "We reused 3 details you already gave us and needed only your new address.",
+      "next_step": "Confirm your new address."
+    },
+    {
+      "id": "open-savings",
+      "label": "Open a savings account",
+      "reuses": ["full_name", "address", "phone", "email"],
+      "asks": [
+        {
+          "field": "opening_deposit",
+          "label": "How much you'd like to put in to start",
+          "type": "number",
+          "why": "We need to know how much to add to your new account."
+        },
+        {
+          "field": "deposit_source",
+          "label": "Where your first deposit comes from",
+          "type": "select",
+          "why": "We need to know which of your accounts to move the money from."
+        }
+      ],
+      "legal_check": null,
+      "turnaround_today": "3–5 business days (est.)",
+      "turnaround_new": "Same or next business day (est.)",
+      "guarantee": {
+        "status": "covered",
+        "note": "If we ask for your address, phone or email again, we'll credit your account $10."
+      },
+      "result_message": "We reused 4 details you already gave us and needed only your first deposit details.",
+      "next_step": "Choose how much to deposit and which account it comes from."
+    },
+    {
+      "id": "report-job-change",
+      "label": "Report a job change",
+      "reuses": ["full_name", "address", "phone", "email"],
+      "asks": [
+        {
+          "field": "new_employer",
+          "label": "Your new employer",
+          "type": "text",
+          "why": "We need your new employer's name so your details stay up to date."
+        }
+      ],
+      "legal_check": null,
+      "turnaround_today": "Up to 5 business days (est.)",
+      "turnaround_new": "Within 1 business day (est.)",
+      "guarantee": {
+        "status": "covered",
+        "note": "If we ask for your address, phone, email or employer again after this, we'll credit your account $10."
+      },
+      "result_message": "We reused 4 details you already gave us and needed only your new employer's name.",
+      "next_step": "Enter your new employer's name and confirm."
+    },
+    {
+      "id": "apply-car-loan",
+      "label": "Apply for a car loan",
+      "reuses": ["full_name", "address", "phone", "email", "employer"],
+      "asks": [
+        {
+          "field": "loan_amount",
+          "label": "How much you want to borrow",
+          "type": "number",
+          "why": "We need to know how much money you're asking for."
+        },
+        {
+          "field": "vehicle",
+          "label": "The car you're buying (year, make and model)",
+          "type": "text",
+          "why": "The car you choose affects the loan we can offer."
+        },
+        {
+          "field": "loan_length",
+          "label": "How long you'd like to pay it back",
+          "type": "select",
+          "why": "This sets the size of your monthly payment."
+        },
+        {
+          "field": "annual_income",
+          "label": "Your yearly income before taxes",
+          "type": "number",
+          "why": "We don't have your income yet, and we need it to make sure the payment fits your budget."
+        }
+      ],
+      "legal_check": "Because you're borrowing money, we're required to confirm it's really you, and with your permission we'll review your credit history. This check isn't part of the Tell Us Once Guarantee.",
+      "turnaround_today": "3–5 business days (est.)",
+      "turnaround_new": "Same or next business day (est.)",
+      "guarantee": {
+        "status": "partly_covered",
+        "note": "If we ask for your address, phone, email or employer again, we'll credit your account $10. The identity and credit check isn't covered."
+      },
+      "result_message": "We reused 5 details you already gave us, including your employer, and needed only your loan details and income.",
+      "next_step": "Add your loan details and income, then give permission for the credit check."
+    },
+    {
+      "id": "add-authorized-user",
+      "label": "Add an authorized user to my card",
+      "reuses": ["full_name", "address", "phone", "email"],
+      "asks": [
+        {
+          "field": "authorized_user_name",
+          "label": "Their full name",
+          "type": "text",
+          "why": "We need to know who you're adding to your card."
+        },
+        {
+          "field": "authorized_user_birth_date",
+          "label": "Their date of birth",
+          "type": "date",
+          "why": "We use this to confirm who they are."
+        }
+      ],
+      "legal_check": "Because you're adding a new person to your card, we're required to confirm who they are. Checking their identity isn't part of the Tell Us Once Guarantee, but we'll reuse your own details.",
+      "turnaround_today": "3–5 business days (est.)",
+      "turnaround_new": "Same or next business day (est.)",
+      "guarantee": {
+        "status": "partly_covered",
+        "note": "If we ask for your address, phone or email again, we'll credit your account $10. Checking the new person's identity isn't covered."
+      },
+      "result_message": "We reused 4 of your details and needed only a few details about the person you're adding.",
+      "next_step": "Enter their name and date of birth, then confirm."
+    }
+  ]
+}
